@@ -5,6 +5,38 @@
 <link rel="stylesheet" href="style.css">
 
 <style>
+/* CSS for the Stories section */
+#stories {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.story-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.story {
+    width: 500px;
+    margin: 0 10px;
+    text-align: left;
+    border: 2px solid #003e21;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.story iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+.story p {
+    padding: 10px;
+}
+
 /* Styles for the slideshow and thumbnails */
 .slideshow {
   display: flex;
@@ -52,8 +84,8 @@ nav a {
 .thumbnail {
   border: 2px solid #003e21;
   overflow: hidden;
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -120,6 +152,36 @@ section#sponsored {
   height: 100%;
   object-fit: cover;
 }
+ /* Styles for the social media icons */
+        .social-media-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .social-media-icons a {
+            display: inline-block;
+            margin: 0 10px; /* Add margin between icons */
+        }
+
+        .social-media-icons img {
+            width: 40px; /* Set a fixed width for icons */
+            height: 40px; /* Set a fixed height for icons */
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .social-media-icons {
+                margin-top: 10px; /* Reduce top margin for smaller screens */
+            }
+
+            .social-media-icons img {
+                width: 30px; /* Reduce icon size for smaller screens */
+                height: 30px; /* Reduce icon size for smaller screens */
+            }
+        }
+
 </style>
 
 </head>
@@ -138,6 +200,7 @@ section#sponsored {
 <h2>Welcome to Ohio County River Guides</h2>
 <p>
 We rent inflatable canoes, packrafts, and paddleboards. We also offer guided trips on the Rough River and the Green River.
+<iframe src="https://calendar.google.com/calendar/embed?src=73f472267b83a3bac5306ffe8dcec242a873e9a668dd977f636c47a214f98d06%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </p>
 <!-- Email Button -->
 <section id="email">
@@ -166,11 +229,11 @@ We rent inflatable canoes, packrafts, and paddleboards. We also offer guided tri
     <img src="https://i.ibb.co/5sJ17HY/IMG-0296.jpg" alt="Packraft" class="slide">
   </div>
 </section>
-
-<div class="thumbnail-container">
+  <div class="thumbnail-container">
   <a href="https://i.ibb.co/RYX7y3N/2023-08-03.png" target="_blank" class="thumbnail thumbnail-paddleboard"><img src="https://i.ibb.co/RYX7y3N/2023-08-03.png" alt="Paddleboard"></a>
   <a href="https://i.ibb.co/3f6NBrG/canoe.jpg" target="_blank" class="thumbnail thumbnail-canoe"><img src="https://i.ibb.co/3f6NBrG/canoe.jpg" alt="Inflatable canoe"></a>
   <a href="https://i.ibb.co/5sJ17HY/IMG-0296.jpg" target="_blank" class="thumbnail thumbnail-packraft"><img src="https://i.ibb.co/5sJ17HY/IMG-0296.jpg" alt="Packraft"></a>
+
 </div>
 
 <!-- YouTube Video Embed -->
@@ -188,15 +251,14 @@ We rent inflatable canoes, packrafts, and paddleboards. We also offer guided tri
 We offer a variety of watercraft for rent, including inflatable canoes, packrafts, and paddleboards. We also offer life jackets and paddles for rent.
 </p>
 <p>
-The rental rates for our watercraft are as follows:
+The rental rates for our watercraft are as follows with a guided trip:
 </p>
 <ul>
-<li>Inflatable canoe: $30 per hour</li>
-<li>Packraft: $10 per hour</li>
-<li>Paddleboard: $15 per hour</li>
+<li>Inflatable canoe: $25</li>
+<li>Paddleboard/ Sit on top Kayak: $15 </li>
 </ul>
 <p>
-We also offer discounts for groups of 4 or more and for members of the local paddling club.
+We also offer discounts for large groups and for members of the local paddling club.
 </p>
 </section>
 <section id="guided-trips">
@@ -208,11 +270,14 @@ We offer guided trips on the Rough River and the Green River. Our trips are led 
 The guided trips we offer are as follows:
 </p>
 <ul>
-<li>Rough River: 3-hour trip, $50 per person</li>
-<li>Green River: 4-hour trip, $60 per person</li>
+<li>Rough River: 2-mile trip, $25 per person</li>
+  <li>Rough River: 4-mile trip, $30 per person</li>
+  <li>Rough River: 6-mile trip, $35 per person</li>
+
+
 </ul>
 <p>
-We also offer discounts for groups of 4 or more.
+Locally owned and operated
 </p>
 </section>
 <section id="contact">
@@ -224,23 +289,58 @@ We also offer discounts for groups of 4 or more.
 warrenmadx@gmail.com
 </p>
 </section>
+<section id="stories">
+    <h2>Stories</h2>
+    <div class="story-container">
+        <div class="story">
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fohio.county.river.guides%2Fposts%2Fpfbid02pjUUSywjbBv3uevp5L2oRFLX4s7fPturd2nUd4FubJA6BG8JMf744pTEwK6FL9e6l&show_text=true&width=500" width="500" height="670" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            <p>A post written by our Guide Kim</p>
+        </div>
+        <div class="story">
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftim.mckeown.7%2Fposts%2Fpfbid0jXWWTq145VJLK5njJ3DevwJoXEBhfpFJxox8Cj7HdJrrWxfSaKanrN1u3cwYa8ecl&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            <p>A review from our Guest Tim.</p>
+        </div>
+        <div class="story">
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fohio.county.river.guides%2Fposts%2Fpfbid02TFH5GLfTxzousTjYoXXk9XdUwW35whWmcBZrGJDRvukLxMCkLEs1Sz1tp9xDL9TCl&show_text=true&width=500" width="500" height="761" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            <p> Water Quality Post</p></div>
+
+            <div class="story">
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fohio.county.river.guides%2Fposts%2Fpfbid06N91RyZ1n7HBrUBvQgyNYhqZmVF5FnLdKLrMMCGBXsbgggzJPrAZYJWhYT6KsrxGl&show_text=true&width=500" width="500" height="792" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            <p> Friendship Floats</p></div>
+    </div>
+</section>
+
+
+
 
 <section id="sponsored">
 <h2>Sponsored By</h2>
 <div class="sponsored-container">
   <div class="sponsored-item">
-    <img src="path_to_image_placeholder1.jpg" alt="Sponsor 1">
+    <img src="wewantyou.png" alt="Sponsor 1">
   </div>
   <div class="sponsored-item">
-    <img src="path_to_image_placeholder2.jpg" alt="Sponsor 2">
+    <img src="wewantyou.png" alt="Sponsor 2">
   </div>
   <div class="sponsored-item">
-    <img src="path_to_image_placeholder3.jpg" alt="Sponsor 3">
+    <img src="wewantyou.png" alt="Sponsor 3">
   </div>
   <!-- Add more sponsored-item divs for additional sponsors -->
 </div>
 </section>
-
+        <!-- Social Media Icons in the footer -->
+        <footer>
+            <div class="social-media-icons">
+                <a href="https://www.instagram.com/ohiocountyriverguides/" target="_blank">
+                    <img src="insta.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/ohio.county.river.guides" target="_blank">
+                    <img src="fb.jpg" alt="Facebook">
+                </a>
+            </div>
+        </footer>
+    </main>
+</body>
 <script>
 // JavaScript code for the image gallery slideshow functionality
 let slideIndex = 1;
@@ -313,6 +413,8 @@ function onPlayerReady(event) {
 
 // Load the YouTube API
 loadYouTubeAPI();
+
+
 </script>
 
 </main>
