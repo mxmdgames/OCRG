@@ -1,158 +1,160 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Ohio County River Guides</title>
-<link rel="stylesheet" href="style.css">
+    <title>Ohio County River Guides</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS for the Stories section */
+        #stories {
+            padding: 20px 0;
+            text-align: center;
+        }
 
-<style>
-/* CSS for the Stories section */
-#stories {
-    padding: 20px 0;
-    text-align: center;
-}
+        .story-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
 
-.story-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
+        .story {
+            width: 500px;
+            margin: 0 10px;
+            text-align: left;
+            border: 2px solid #003e21;
+            border-radius: 10px;
+            overflow: hidden;
+        }
 
-.story {
-    width: 500px;
-    margin: 0 10px;
-    text-align: left;
-    border: 2px solid #003e21;
-    border-radius: 10px;
-    overflow: hidden;
-}
+        .story iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
 
-.story iframe {
-    width: 100%;
-    height: 500px;
-    border: none;
-}
+        .story p {
+            padding: 10px;
+        }
 
-.story p {
-    padding: 10px;
-}
+        /* Styles for the slideshow and thumbnails */
+        .slideshow {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
 
-/* Styles for the slideshow and thumbnails */
-.slideshow {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-.slideshow img {
-  width: 250px;
-  height: 250px;
-  cursor: pointer;
-  border-radius: 50%;
-}
+        .slideshow img {
+            width: 250px;
+            height: 250px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
 
-/* Add smooth scrolling behavior */
-html {
-  scroll-behavior: smooth;
-}
+        /* Add smooth scrolling behavior */
+        html {
+            scroll-behavior: smooth;
+        }
 
-/* Styles for the hover effect */
-.thumbnail:hover {
-  transform: scale(1.2);
-}
+        /* Styles for the hover effect */
+        .thumbnail:hover {
+            transform: scale(1.2);
+        }
 
-/* Custom Theme Colors */
-body {
-  background-color: #f4f9f4;
-  color: #222;
-}
+        /* Custom Theme Colors */
+        body {
+            background-color: #f4f9f4;
+            color: #222;
+        }
 
-header {
-  background-color: #003e21;
-  color: #fff;
-}
+        header {
+            background-color: #003e21;
+            color: #fff;
+        }
 
-nav a {
-  color: #fff;
-}
+        nav a {
+            color: #fff;
+        }
 
-.thumbnail-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
+        .thumbnail-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
 
-.thumbnail {
-  border: 2px solid #003e21;
-  overflow: hidden;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-}
+        .thumbnail {
+            border: 2px solid #003e21;
+            overflow: hidden;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+        }
 
-.thumbnail img {
-  display: none;
-}
+        .thumbnail img {
+            display: none;
+        }
 
-.thumbnail.thumbnail-paddleboard {
-  background-image: url("https://i.ibb.co/RYX7y3N/2023-08-03.png");
-}
+        .thumbnail.thumbnail-paddleboard {
+            background-image: url("https://i.ibb.co/RYX7y3N/2023-08-03.png");
+        }
 
-.thumbnail.thumbnail-canoe {
-  background-image: url("https://i.ibb.co/3f6NBrG/canoe.jpg");
-}
+        .thumbnail.thumbnail-canoe {
+            background-image: url("https://i.ibb.co/3f6NBrG/canoe.jpg");
+        }
 
-.thumbnail.thumbnail-packraft {
-  background-image: url("https://i.ibb.co/5sJ17HY/IMG-0296.jpg");
-}
+        .thumbnail.thumbnail-packraft {
+            background-image: url("https://i.ibb.co/5sJ17HY/IMG-0296.jpg");
+        }
 
-.video-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 300px;
-}
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 300px;
+        }
 
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-/* Custom styles for the "Sponsored By" section */
-section#sponsored {
-  padding: 20px 0;
-  text-align: center;
-}
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-.sponsored-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
+        /* Custom styles for the "Sponsored By" section */
+        section#sponsored {
+            padding: 20px 0;
+            text-align: center;
+        }
 
-.sponsored-item {
-  width: 250px;
-  height: 250px;
-  border: 2px solid #003e21;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f4f9f4;
-}
+        .sponsored-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
 
-.sponsored-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
- /* Styles for the social media icons */
+        .sponsored-item {
+            width: 250px;
+            height: 250px;
+            border: 2px solid #003e21;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f4f9f4;
+        }
+
+        .sponsored-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Styles for the social media icons */
         .social-media-icons {
             display: flex;
             justify-content: center;
@@ -181,244 +183,227 @@ section#sponsored {
                 height: 30px; /* Reduce icon size for smaller screens */
             }
         }
-
-</style>
-
+    </style>
 </head>
 <body>
 <header>
-<h1>Ohio County River Guides</h1>
-<nav>
-  <a href="#home">Home</a>
-  <a href="#rentals">Rentals</a>
-  <a href="#guided-trips">Guided Trips</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <h1>Ohio County River Guides</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#rentals">Rentals</a>
+        <a href="#guided-trips">Guided Trips</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 <main>
-<section id="home">
-<h2>Welcome to Ohio County River Guides</h2>
-<p>
-We rent inflatable canoes, packrafts, and paddleboards. We also offer guided trips on the Rough River and the Green River.
-<!-- Embed Google Calendar -->
-<iframe src="https://calendar.google.com/calendar/embed?src=73f472267b83a3bac5306ffe8dcec242a873e9a668dd977f636c47a214f98d06%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-
-</section>
-<!-- Email Button -->
-<section id="email">
-  <h2>Contact Us</h2>
-  <p>
-    For more information about rentals or guided trips, please email us:
-    <a href="mailto:warrenmadx@gmail.com?subject=Inquiry%20about%20Rentals%20and%20Guided%20Trips&body=Hi%2C%20I'd%20like%20more%20information%20about%20rentals%20or%20guided%20trips!%20*please%20provide%20a%20valid%20phone%20number%20for%20fast%20results*">Email Us</a>
-  </p>
-</section>
-<!-- Video Banner -->
-<section id="videos">
-  <h2>OCRG</h2>
-  <div class="video-container" id="player">
-    <!-- Embed the YouTube video using the iframe tag -->
-    <iframe width="100%" height="300" src="https://www.youtube.com/embed/4UIOUKgdOrE?autoplay=1&loop=1&playlist=4UIOUKgdOrE" frameborder="0" allowfullscreen></iframe>
-  </div>
-</section>
-
-
-<!-- Image Gallery -->
-<section id="gallery">
-  <h2>Gallery</h2>
-  <div class="slideshow">
-    <img src="https://i.ibb.co/RYX7y3N/2023-08-03.png" alt="Paddleboard" class="slide">
-    <img src="https://i.ibb.co/3f6NBrG/canoe.jpg" alt="Inflatable canoe" class="slide">
-    <img src="https://i.ibb.co/5sJ17HY/IMG-0296.jpg" alt="Packraft" class="slide">
-  </div>
-</section>
-  <div class="thumbnail-container">
-  <a href="https://i.ibb.co/RYX7y3N/2023-08-03.png" target="_blank" class="thumbnail thumbnail-paddleboard"><img src="https://i.ibb.co/RYX7y3N/2023-08-03.png" alt="Paddleboard"></a>
-  <a href="https://i.ibb.co/3f6NBrG/canoe.jpg" target="_blank" class="thumbnail thumbnail-canoe"><img src="https://i.ibb.co/3f6NBrG/canoe.jpg" alt="Inflatable canoe"></a>
-  <a href="https://i.ibb.co/5sJ17HY/IMG-0296.jpg" target="_blank" class="thumbnail thumbnail-packraft"><img src="https://i.ibb.co/5sJ17HY/IMG-0296.jpg" alt="Packraft"></a>
-
-</div>
-
-<!-- YouTube Video Embed -->
-<section id="video">
-  <h2>Videos</h2>
-  <div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/zuBOJJivlWw" frameborder="0" allowfullscreen></iframe>
-  </div>
-</section>
-
-</section>
-<section id="rentals">
-<h2>Rentals</h2>
-<p>
-We offer a variety of watercraft for rent, including inflatable canoes, packrafts, and paddleboards. We also offer life jackets and paddles for rent.
-</p>
-<p>
-The rental rates for our watercraft are as follows with a guided trip:
-</p>
-<ul>
-<li>Inflatable canoe: $25</li>
-<li>Paddleboard/ Sit on top Kayak: $15 </li>
-</ul>
-<p>
-We also offer discounts for large groups and for members of the local paddling club.
-</p>
-</section>
-<section id="guided-trips">
-<h2>Guided Trips</h2>
-<p>
-We offer guided trips on the Rough River and the Green River. Our trips are led by experienced guides who will take you to some of the most beautiful spots in the area.
-</p>
-<p>
-The guided trips we offer are as follows:
-</p>
-<ul>
-<li>Rough River: 2-mile trip, $25 per person</li>
-  <li>Rough River: 4-mile trip, $30 per person</li>
-  <li>Rough River: 6-mile trip, $35 per person</li>
-
-
-</ul>
-<p>
-Locally owned and operated
-</p>
-</section>
-<section id="contact">
-<h2>Contact Us</h2>
-<p>
-5022211804
-</p>
-<p>
-warrenmadx@gmail.com
-</p>
-</section>
-<section id="stories">
-    <h2>Stories</h2>
-    <div class="story-container">
-        <div class="story">
-            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fohio.county.river.guides%2Fposts%2Fpfbid02pjUUSywjbBv3uevp5L2oRFLX4s7fPturd2nUd4FubJA6BG8JMf744pTEwK6FL9e6l&show_text=true&width=500" width="500" height="670" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-            <p>A post written by our Guide Kim</p>
+    <section id="home">
+        <h2>Welcome to Ohio County River Guides</h2>
+        <p>
+            We rent inflatable canoes, packrafts, and paddleboards. We also offer guided trips on the Rough River and the Green River.
+            <!-- Embed Google Calendar -->
+            <iframe src="https://calendar.google.com/calendar/embed?src=73f472267b83a3bac5306ffe8dcec242a873e9a668dd977f636c47a214f98d06%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        </p>
+    </section>
+    <!-- Email Button -->
+    <section id="email">
+        <h2>Contact Us</h2>
+        <p>
+            For more information about rentals or guided trips, please email us:
+            <a href="mailto:warrenmadx@gmail.com?subject=Inquiry%20about%20Rentals%20and%20Guided%20Trips&body=Hi%2C%20I'd%20like%20more%20information%20about%20rentals%20or%20guided%20trips!%20*please%20provide%20a%20valid%20phone%20number%20for%20fast%20results*">Email Us</a>
+        </p>
+    </section>
+    <!-- Video Banner -->
+    <section id="videos">
+        <h2>OCRG</h2>
+        <div class="video-container" id="player">
+            <!-- Embed the YouTube video using the iframe tag -->
+            <iframe width="100%" height="300" src="https://www.youtube.com/embed/4UIOUKgdOrE?autoplay=1&loop=1&playlist=4UIOUKgdOrE" frameborder="0" allowfullscreen></iframe>
         </div>
-        <div class="story">
-            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftim.mckeown.7%2Fposts%2Fpfbid0jXWWTq145VJLK5njJ3DevwJoXEBhfpFJxox8Cj7HdJrrWxfSaKanrN1u3cwYa8ecl&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-            <p>A review from our Guest Tim.</p>
+    </section>
+    <!-- Image Gallery -->
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="slideshow">
+            <img src="https://i.ibb.co/RYX7y3N/2023-08-03.png" alt="Paddleboard" class="slide">
+            <img src="https://i.ibb.co/3f6NBrG/canoe.jpg" alt="Inflatable canoe" class="slide">
+            <img src="https://i.ibb.co/5sJ17HY/IMG-0296.jpg" alt="Packraft" class="slide">
         </div>
-        <div class="story">
-            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fohio.county.river.guides%2Fposts%2Fpfbid02TFH5GLfTxzousTjYoXXk9XdUwW35whWmcBZrGJDRvukLxMCkLEs1Sz1tp9xDL9TCl&show_text=true&width=500" width="500" height="761" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-            <p> Water Quality Post</p></div>
-
-            <div class="story">
-            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fohio.county.river.guides%2Fposts%2Fpfbid06N91RyZ1n7HBrUBvQgyNYhqZmVF5FnLdKLrMMCGBXsbgggzJPrAZYJWhYT6KsrxGl&show_text=true&width=500" width="500" height="792" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-            <p> Friendship Floats</p></div>
+    </section>
+    <div class="thumbnail-container">
+        <a href="https://i.ibb.co/RYX7y3N/2023-08-03.png" target="_blank" class="thumbnail thumbnail-paddleboard"><img src="https://i.ibb.co/RYX7y3N/2023-08-03.png" alt="Paddleboard"></a>
+        <a href="https://i.ibb.co/3f6NBrG/canoe.jpg" target="_blank" class="thumbnail thumbnail-canoe"><img src="https://i.ibb.co/3f6NBrG/canoe.jpg" alt="Inflatable canoe"></a>
+        <a href="https://i.ibb.co/5sJ17HY/IMG-0296.jpg" target="_blank" class="thumbnail thumbnail-packraft"><img src="https://i.ibb.co/5sJ17HY/IMG-0296.jpg" alt="Packraft"></a>
     </div>
-</section>
-
-
-
-
-<section id="sponsored">
-<h2>Sponsored By</h2>
-<div class="sponsored-container">
-  <div class="sponsored-item">
-    <img src="wewantyou.png" alt="Sponsor 1">
-  </div>
-  <div class="sponsored-item">
-    <img src="wewantyou.png" alt="Sponsor 2">
-  </div>
-  <div class="sponsored-item">
-    <img src="wewantyou.png" alt="Sponsor 3">
-  </div>
-  <!-- Add more sponsored-item divs for additional sponsors -->
-</div>
-</section>
-        <!-- Social Media Icons in the footer -->
-        <footer>
-            <div class="social-media-icons">
-                <a href="https://www.instagram.com/ohiocountyriverguides/" target="_blank">
-                    <img src="insta.png" alt="Instagram">
-                </a>
-                <a href="https://www.facebook.com/ohio.county.river.guides" target="_blank">
-                    <img src="fb.jpg" alt="Facebook">
-                </a>
+    <!-- YouTube Video Embed -->
+    <section id="video">
+        <h2>Videos</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zuBOJJivlWw" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+    <section id="rentals">
+        <h2>Rentals</h2>
+        <p>
+            We offer a variety of watercraft for rent, including inflatable canoes, packrafts, and paddleboards. We also offer life jackets and paddles for rent.
+        </p>
+        <p>
+            The rental rates for our watercraft are as follows with a guided trip:
+        </p>
+        <ul>
+            <li>Inflatable canoe: $25</li>
+            <li>Paddleboard/ Sit on top Kayak: $15 </li>
+        </ul>
+        <p>
+            We also offer discounts for large groups and for members of the local paddling club.
+        </p>
+    </section>
+    <section id="guided-trips">
+        <h2>Guided Trips</h2>
+        <p>
+            We offer guided trips on the Rough River and the Green River. Our trips are led by experienced guides who will take you to some of the most beautiful spots in the area.
+        </p>
+        <p>
+            The guided trips we offer are as follows:
+        </p>
+        <ul>
+            <li>Rough River: 2-mile trip, $25 per person</li>
+            <li>Rough River: 4-mile trip, $30 per person</li>
+            <li>Rough River: 6-mile trip, $35 per person</li>
+        </ul>
+        <p>
+            Locally owned and operated
+        </p>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>
+            5022211804
+        </p>
+        <p>
+            warrenmadx@gmail.com
+        </p>
+    </section>
+    <section id="stories">
+        <h2>Stories</h2>
+        <div class="story-container">
+            <div class="story">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fohio.county.river.guides%2Fposts%2Fpfbid02pjUUSywjbBv3uevp5L2oRFLX4s7fPturd2nUd4FubJA6BG8JMf744pTEwK6FL9e6l&show_text=true&width=500" width="500" height="670" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <p>A post written by our Guide Kim</p>
             </div>
-        </footer>
-    </main>
-</body>
-<script>
-// JavaScript code for the image gallery slideshow functionality
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function showSlides(n) {
-  const slides = document.getElementsByClassName('slide');
-  const thumbnails = document.getElementsByClassName('thumbnail');
-
-  if (n > slides.length) {
-    slideIndex = 1;
-  } else if (n < 1) {
-    slideIndex = slides.length;
-  }
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none';
-  }
-
-  for (let i = 0; i < thumbnails.length; i++) {
-    thumbnails[i].style.border = '';
-  }
-
-  slides[slideIndex - 1].style.display = 'block';
-  thumbnails[slideIndex - 1].style.border = '2px solid #007bff';
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-// Automatic slideshow
-let slideTimer = setInterval(() => {
-  slideIndex++;
-  showSlides(slideIndex);
-}, 3000); // Change slide every 3 seconds
-
-// Load the YouTube iframe API script asynchronously
-function loadYouTubeAPI() {
-  const tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/iframe_api";
-  const firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-}
-
-// Create a YouTube player when the API script is loaded
-let player;
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('player', {
-    height: '300',
-    width: '100%',
-    videoId: '4UIOUKgdOrE',
-    playerVars: {
-      autoplay: 1,
-      loop: 1,
-      playlist: '4UIOUKgdOrE',
-      controls: 0,
-      showinfo: 0,
-    },
-    events: {
-      onReady: onPlayerReady,
-    }
-  });
-}
-
-// Start video playback when the player is ready
-function onPlayerReady(event) {
-  event.target.playVideo();
-}
-
-// Load the YouTube API
-loadYouTubeAPI();
-
-
-</script>
-
+            <div class="story">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftim.mckeown.7%2Fposts%2Fpfbid0jXWWTq145VJLK5njJ3DevwJoXEBhfpFJxox8Cj7HdJrrWxfSaKanrN1u3cwYa8ecl&show_text=true&width=500" width="500" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <p>A review from our Guest Tim.</p>
+            </div>
+            <div class="story">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fohio.county.river.guides%2Fposts%2Fpfbid02TFH5GLfTxzousTjYoXXk9XdUwW35whWmcBZrGJDRvukLxMCkLEs1Sz1tp9xDL9TCl&show_text=true&width=500" width="500" height="761" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <p> Water Quality Post</p>
+            </div>
+            <div class="story">
+                <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fohio.county.river.guides%2Fposts%2Fpfbid06N91RyZ1n7HBrUBvQgyNYhqZmVF5FnLdKLrMMCGBXsbgggzJPrAZYJWhYT6KsrxGl&show_text=true&width=500" width="500" height="792" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                <p> Friendship Floats</p>
+            </div>
+        </div>
+    </section>
+    <section id="sponsored">
+        <h2>Sponsored By</h2>
+        <div class="sponsored-container">
+            <div class="sponsored-item">
+                <img src="wewantyou.png" alt="Sponsor 1">
+            </div>
+            <div class="sponsored-item">
+                <img src="wewantyou.png" alt="Sponsor 2">
+            </div>
+            <div class="sponsored-item">
+                <img src="wewantyou.png" alt="Sponsor 3">
+            </div>
+            <!-- Add more sponsored-item divs for additional sponsors -->
+        </div>
+    </section>
+    <!-- Social Media Icons in the footer -->
+    <footer>
+        <div class="social-media-icons">
+            <a href="https://www.instagram.com/ohiocountyriverguides/" target="_blank">
+                <img src="insta.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/ohio.county.river.guides" target="_blank">
+                <img src="fb.jpg" alt="Facebook">
+            </a>
+        </div>
+    </footer>
 </main>
 </body>
+<script>
+    // JavaScript code for the image gallery slideshow functionality
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function showSlides(n) {
+        const slides = document.getElementsByClassName('slide');
+        const thumbnails = document.getElementsByClassName('thumbnail');
+
+        if (n > slides.length) {
+            slideIndex = 1;
+        } else if (n < 1) {
+            slideIndex = slides.length;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+
+        for (let i = 0; i < thumbnails.length; i++) {
+            thumbnails[i].style.border = '';
+        }
+
+        slides[slideIndex - 1].style.display = 'block';
+        thumbnails[slideIndex - 1].style.border = '2px solid #007bff';
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    // Automatic slideshow
+    let slideTimer = setInterval(() => {
+        slideIndex++;
+        showSlides(slideIndex);
+    }, 3000); // Change slide every 3 seconds
+
+    // Load the YouTube iframe API script asynchronously
+    function loadYouTubeAPI() {
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+
+    // Create a YouTube player when the API script is loaded
+    let player;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '300',
+            width: '100%',
+            videoId: '4UIOUKgdOrE',
+            playerVars: {
+                autoplay: 1,
+                loop: 1,
+                playlist: '4UIOUKgdOrE',
+                controls: 0,
+                showinfo: 0,
+            },
+            events: {
+                onReady: onPlayerReady,
+            }
+        });
+    }
+
+    // Start video playback when the player is ready
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+
+    // Load the YouTube API
+    loadYouTubeAPI();
+</script>
 </html>
